@@ -1,0 +1,28 @@
+{
+  "name": "markdown-blog-project",
+  "version": "1.0.0",
+  "description": "Projeto de um Blog com base em Markdown. Utilizando NodeJS, ExpressJS, e MongoDB como tecnologias.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhonata-Tavares/Markdown-Blog-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhonata-Tavares/Markdown-Blog-Project/issues"
+  },
+  "homepage": "https://github.com/Jhonata-Tavares/Markdown-Blog-Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
