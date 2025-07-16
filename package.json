@@ -4,7 +4,7 @@
   "description": "Projeto de um Blog com base em Markdown. Utilizando NodeJS, ExpressJS, e MongoDB como tecnologias.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devstart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
