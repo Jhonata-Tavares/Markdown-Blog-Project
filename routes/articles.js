@@ -39,6 +39,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     await article.findByIdAndDelete(req.params.id);
+    res.redirect('/');
 });
 
 export default router;
