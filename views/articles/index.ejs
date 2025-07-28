@@ -20,23 +20,18 @@
 
         <!-- Toda linha onde estiver o '<% %>' ou então o '<%= %>', o HTML interpretará como comandos JS ou Variáveis JS respectivamente -->
         <!-- Estamo utilizando para mostrar na tela os artigos já realizados -->
-        <% if (articles.length === 0) { %>
-            <p class="mt-4">No articles found.</p>
-        <% } else { %>
-            <% articles.forEach(article => { %>
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="/articles/<%= article.id %>"><%= article.title %></a>
-                        </h4>
-                        <div class="card-subtitle text-muted mb-2">
-                            <%= article.createdAt.toLocaleDateString() %>
-                        </div>
-                        <div class="card-text mb-2"><%= article.description %></div>
+        <% articles.forEach(article => { %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title"><%= article.title %></h4>
+                    <div class="card-subtitle text-muted mb-2">
+                        <%= article.createdAt.toLocaleDateString() %>
                     </div>
+                    <div class="card-text mb-2"><%= article.description %></div>
+                    <a href="/articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
                 </div>
-            <% }) %>
-        <% } %>
+            </div>
+        <% }) %>
     </div>
 
 </body>
