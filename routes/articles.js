@@ -8,6 +8,11 @@ router.get('/new', (req, res) => {
     res.render('articles/new', { article: new Article() }); 
 });
 
+router.get('/edit', (req, res) => {
+    res.render('articles/new', { article: new Article() }); 
+});
+
+
 router.get('/:slug', async (req, res) => {
 
     const article = await Article.findOne({ slug: req.params.slug}); // Buscando o artigo pelo slug fornecido na URL
@@ -30,6 +35,10 @@ router.post('/', async (req, res) => {
         console.log(e);
         res.render('articles/new', { article: article });
     }
+});
+
+router.delete('/:id', async (req, res) => {
+    await article.findByIdAndDelete(req.params.id);
 });
 
 export default router;
