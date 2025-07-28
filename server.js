@@ -5,6 +5,7 @@ import article from './models/article.js';
 
 mongoose.connect('mongodb://localhost/blog')
 
+
 const app = express();
 
 app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualização
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: false })); // Middleware para interpretar
 // Rota principal
 app.get('/', (req, res) =>{
 
-    res.render('articles/index', { articles: articles }) // Renderizando a view de artigos com os dados
+    res.render('articles/index', { articles: article }) // Renderizando a view de artigos com os dados
 });
 
 app.use('/articles', articlesRouter); // Usando o router de artigos para rotas de artigos
