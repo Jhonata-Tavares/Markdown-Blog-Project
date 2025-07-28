@@ -3,8 +3,7 @@ import mongoose from 'mongoose';
 import articlesRouter from './routes/articles.js' // Importando as rotas de artigos
 import Article from './models/article.js';
 
-mongoose.connect('mongodb://localhost/blog')
-
+mongoose.connect('mongodb://localhost/blog');
 
 const app = express();
 
