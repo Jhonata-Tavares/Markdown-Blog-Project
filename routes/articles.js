@@ -33,12 +33,12 @@ router.post('/', async (req, res) => {
         res.redirect(`/articles/${article.slug}`);
     } catch (e) {
         console.log(e);
-        res.render('articles/new', { article: article });
+        res.render('articles/new', { article });
     }
 });
 
 router.delete('/:id', async (req, res) => {
-    await article.findByIdAndDelete(req.params.id);
+    await Article.findByIdAndDelete(req.params.id);
     res.redirect('/');
 });
 
