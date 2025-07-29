@@ -23,7 +23,6 @@ const articleSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    
     slug: {
         type: String,
         required: true,
@@ -44,7 +43,6 @@ articleSchema.pre('validate', function(next) {
         this.sanitizedHTML = dompurifyJS.sanitize(marked(this.markdown));
     }
     next();
-
 });
 
 export default mongoose.model('Article', articleSchema);
